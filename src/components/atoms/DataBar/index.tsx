@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './style';
-import { useOfferData } from '~/data';
+import { useOfferData } from '~/data/OfferData';
 import { OnlyID } from '~/types/only';
 import { BsDot } from 'react-icons/all';
 

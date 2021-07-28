@@ -10,4 +10,10 @@ export const Wrapper = styled.div`
 export const JobTitle = styled.div`
   font-weight: bold;
   color: #2E3A3B;
+  
+  
+  &:hover { 
+    cursor: pointer;
+    color: #749B98;
+  }
 `;

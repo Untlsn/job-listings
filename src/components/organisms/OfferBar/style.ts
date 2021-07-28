@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import TagBase from '~/components/atoms/TagBase';
 
 export const Wrapper = styled.div<{ $selectBorder: boolean }>`
   width: min(1100px, 90vw);
@@ -36,16 +37,9 @@ export const SubWrapper = styled.div`
   gap: 30px;
 `;
 
-export const Tag = styled.div`
-  height: 25px;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: bold;
-  background-color: #EDF6F5;
-  text-transform: capitalize;
-  color: #749B98;
+export const Tag = styled(TagBase)`
+  &:hover {
+    background-color: #749B98;
+    color: #EDF6F5;
+  }
 `;

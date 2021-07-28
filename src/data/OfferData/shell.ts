@@ -1,6 +1,7 @@
-import { Data } from '~/data/types';
+import { Data } from '~/data/OfferData/types';
 
 export const shell = (data: Data) => ({
+  id: data.id,
   get tags() { return [data.role, data.level, ...data.languages]; },
   get workData() {
     return {

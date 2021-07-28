@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './style';
 import { OnlyID } from '~/types/only';
-import { useOfferData } from '~/data';
+import { useOfferData } from '~/data/OfferData';
 import DataBar from '~/components/atoms/DataBar';
 import CompanyName from '~/components/atoms/CompanyName';
 

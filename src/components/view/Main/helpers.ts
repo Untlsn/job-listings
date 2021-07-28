@@ -1,0 +1,1 @@
+export const containAll = <T>(arr: T[], subArr: T[]) => subArr.every(it => arr.includes(it));

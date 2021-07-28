@@ -12,4 +12,5 @@ export const Header = styled.header`
   background: #5da4a4 url("${bgHeaderDesktop}");
   height: 150px;
   width: 100vw;
+  margin-bottom: 50px;
 `;

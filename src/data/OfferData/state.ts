@@ -1,4 +1,4 @@
-import { Data } from './types.d';
+import { Data } from './types';
 
 const createLogo = (id: string) => `https://drive.google.com/uc?export=view&id=${id}`;
 
