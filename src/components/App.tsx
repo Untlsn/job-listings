@@ -1,16 +1,14 @@
-import React, { createContext } from 'react';
+import React from 'react';
 import { GlobalStyle } from '~/assets/style/global';
 import Main from '~/components/view/Main';
-import data from '~/data';
-
-const OfferData = createContext(data);
+import { Provider } from '~/data';
 
 const App = () => {
   return (
-    <OfferData.Provider value={data}>
+    <Provider>
       <GlobalStyle />
       <Main />
-    </OfferData.Provider>
+    </Provider>
   );
 };
 

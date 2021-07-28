@@ -1,23 +1,18 @@
 import React from 'react';
 import * as S from './style';
-import { BsDot } from 'react-icons/all';
+import { OnlyID } from '~/types/only';
+import { useOfferData } from '~/data';
+import DataBar from '~/components/atoms/DataBar';
+import CompanyName from '~/components/atoms/CompanyName';
 
-const OfferLeft = () => {
+const OfferLeft = ({ id }: OnlyID<number>) => {
+  const position = useOfferData().getByID(id).unshell.position;
+
   return (
     <S.Wrapper>
-      <S.Flex>
-        <S.EmployerName>Photosnap</S.EmployerName>
-        <S.RoundPrompt $color='#5EA4A3'>new!</S.RoundPrompt>
-        <S.RoundPrompt $color='#2E3A3B'>featured</S.RoundPrompt>
-      </S.Flex>
-      <S.JobTitle>Senior Frontend Developer</S.JobTitle>
-      <S.DataBar>
-        <span>1d ago</span>
-        <BsDot />
-        <span>Full Time</span>
-        <BsDot />
-        <span>USA only</span>
-      </S.DataBar>
+      <CompanyName id={id} />
+      <S.JobTitle>{position}</S.JobTitle>
+      <DataBar id={id} />
     </S.Wrapper>
   );
 };

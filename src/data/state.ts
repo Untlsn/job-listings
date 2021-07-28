@@ -1,24 +1,12 @@
-export interface Data {
-  id: number,
-  company: string,
-  logo: string,
-  position: string,
-  role: string,
-  level: string,
-  postedAt: string,
-  contract: string,
-  location: string,
-  new: boolean,
-  featured: boolean,
-  languages: string[],
-  tools: string[],
-}
+import { Data } from './types.d';
 
-const data: Data[] = [
+const createLogo = (id: string) => `https://drive.google.com/uc?export=view&id=${id}`;
+
+export const state: Data[] = [
   {
     id: 1,
     company: 'Photosnap',
-    logo: './images/photosnap.svg',
+    logo: createLogo('1O-kLVXzZ16jUNH87P4SGxOKEzrbEiXVh'),
     new: true,
     featured: true,
     position: 'Senior Frontend Developer',
@@ -33,7 +21,7 @@ const data: Data[] = [
   {
     id: 2,
     company: 'Manage',
-    logo: './images/manage.svg',
+    logo: createLogo('1jNffaAhXVZQB59phzToIQw5NJwUBtNd2'),
     new: true,
     featured: true,
     position: 'Fullstack Developer',
@@ -48,7 +36,7 @@ const data: Data[] = [
   {
     id: 3,
     company: 'Account',
-    logo: './images/account.svg',
+    logo: createLogo('1nq5m0zg9bJ3EBjKiEhRFlOn-7Y4SS73i'),
     new: true,
     featured: false,
     position: 'Junior Frontend Developer',
@@ -63,7 +51,7 @@ const data: Data[] = [
   {
     id: 4,
     company: 'MyHome',
-    logo: './images/myhome.svg',
+    logo: createLogo('1RX_i-837CuLXIR1hkfRuzmPwkyOR3dEh'),
     new: false,
     featured: false,
     position: 'Junior Frontend Developer',
@@ -78,7 +66,7 @@ const data: Data[] = [
   {
     id: 5,
     company: 'Loop Studios',
-    logo: './images/loop-studios.svg',
+    logo: createLogo('1FemJAb1H7XopmDG5bkhdnBjIeqgZesU8'),
     new: false,
     featured: false,
     position: 'Software Engineer',
@@ -93,7 +81,7 @@ const data: Data[] = [
   {
     id: 6,
     company: 'FaceIt',
-    logo: './images/faceit.svg',
+    logo: createLogo('1Dak6ZP-47jbxOgyoOoESWvXC-6DXAYiL'),
     new: false,
     featured: false,
     position: 'Junior Backend Developer',
@@ -108,7 +96,7 @@ const data: Data[] = [
   {
     id: 7,
     company: 'Shortly',
-    logo: './images/shortly.svg',
+    logo: createLogo('1ujPbVqFuJBWd7nYFQ3LzJguNtKYnDO5m'),
     new: false,
     featured: false,
     position: 'Junior Developer',
@@ -123,7 +111,7 @@ const data: Data[] = [
   {
     id: 8,
     company: 'Insure',
-    logo: './images/insure.svg',
+    logo: createLogo('1eVePYlLs6VhDLCb7xVZPqA0R_w0kIghJ'),
     new: false,
     featured: false,
     position: 'Junior Frontend Developer',
@@ -138,7 +126,7 @@ const data: Data[] = [
   {
     id: 9,
     company: 'Eyecam Co.',
-    logo: './images/eyecam-co.svg',
+    logo: createLogo('1W6slDaWStpbniIgLqkj6hLppnav2pALO'),
     new: false,
     featured: false,
     position: 'Full Stack Engineer',
@@ -153,7 +141,7 @@ const data: Data[] = [
   {
     id: 10,
     company: 'The Air Filter Company',
-    logo: './images/the-air-filter-company.svg',
+    logo: createLogo('1ZKhaXFGKHGeZuwW7Ue1O3q8nJ7-EQy5y'),
     new: false,
     featured: false,
     position: 'Front-end Dev',
@@ -166,5 +154,3 @@ const data: Data[] = [
     tools: ['React', 'Sass'],
   },
 ];
-
-export default data;
