@@ -10,10 +10,10 @@ const OfferBar = ({ id }: OnlyID<number>) => {
   const data = useOfferData().getByID(id);
   const createdTags = data.tags
     .map(val => <S.Tag onClick={() => add(val)} key={val}>{val}</S.Tag>);
-  const imgSrc = data.unshell.logo;
+  const { logo: imgSrc, featured } = data.unshell;
 
   return (
-    <S.Wrapper $selectBorder={true}>
+    <S.Wrapper $selectBorder={featured}>
       <S.SubWrapper>
         <S.Image src={imgSrc} />
         <OfferLeft id={id} />
